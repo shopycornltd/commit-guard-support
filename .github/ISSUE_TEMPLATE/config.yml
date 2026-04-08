@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Commit Guard documentation
+    url: https://shopycornltd.github.io/commit-guard-support/docs/
+    about: Start here for setup, compatibility, commit-message generation, and terminal workflow guidance.
+  - name: Security reporting
+    url: https://shopycornltd.github.io/commit-guard-site/security/
+    about: Please do not file security issues publicly.
+  - name: Main product site
+    url: https://shopycornltd.github.io/commit-guard-site/
+    about: Product overview, legal pages, and Marketplace-facing content.

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Commit Guard Docs | Technical Information</title>
+    <meta
+      name="description"
+      content="Technical information for Commit Guard, including providers, workflows, compatibility, plans, and operational notes."
+    />
+    <link rel="stylesheet" href="../../assets/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="../../">
+          <span class="brand-logo" aria-hidden="true">
+            <img src="../../assets/commit-guard-logo.svg" alt="Commit Guard logo" width="52" height="52" />
+          </span>
+          <span>
+            <strong>Commit Guard Support</strong>
+            <em>Technical Information</em>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href="../../">Home</a>
+          <a href="../" aria-current="page">Documentation</a>
+          <a href="../faq/">FAQ</a>
+          <a href="../../issue-tracker/">Issue Tracker</a>
+          <a href="https://shopycornltd.github.io/commit-guard-site/">Main Site</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="eyebrow">Technical Information</div>
+          <h1>Capabilities, compatibility, and operational details.</h1>
+          <p class="lede">
+            This page summarizes the product surface that matters most for setup, Marketplace review, and support triage.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container doc-shell">
+          <aside class="doc-sidebar">
+            <div class="sidebar-card">
+              <h3>Documentation</h3>
+              <div class="sidebar-links">
+                <a href="../">Docs Home</a>
+                <a href="../getting-started/">Getting Started</a>
+                <a href="./" aria-current="page">Technical Information</a>
+                <a href="../commit-messages/">Commit Messages</a>
+                <a href="../faq/">FAQ</a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="doc-body">
+            <section>
+              <h2>Core capabilities</h2>
+              <ul class="doc-list">
+                <li>Review pending changes, local commits, and folder scopes</li>
+                <li>Workflow-driven review execution inside IntelliJ</li>
+                <li>Structured findings and generated reports</li>
+                <li>Terminal commit gate through managed Git hooks</li>
+                <li>Debug dashboard and workflow telemetry</li>
+                <li>Workflow Studio for visual workflow authoring</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Plans</h2>
+              <ul class="doc-list">
+                <li><strong>Community:</strong> local review with <code>Ollama CLI</code> and the core AI review flow</li>
+                <li><strong>Platinum:</strong> all supported providers, advanced workflows, commit-message generation, debug tooling, daemon features, and terminal gating</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Provider types</h2>
+              <ul class="doc-list">
+                <li>Local <code>Ollama CLI</code></li>
+                <li>Supported cloud providers in Platinum</li>
+                <li>Role-based model selection for review flows</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Compatibility</h2>
+              <ul class="doc-list">
+                <li>Built for current IntelliJ IDEA 2025.3 and 2026.1 compatible ranges</li>
+                <li>Verified through the JetBrains Plugin Verifier in release automation</li>
+                <li>Marketplace release metadata is tracked per paid release line for stable publication</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Operational notes</h2>
+              <ul class="doc-list">
+                <li>Terminal commit workflows require the repo sidecar, managed hook installation, and an open IntelliJ project for the same repo.</li>
+                <li>Blank terminal commit messages can be prefilled on Platinum when the managed hook path is active.</li>
+                <li>Explicit terminal commit messages such as <code>git commit -m</code> are preserved and not rewritten.</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand" href="../../">
+          <span class="brand-logo" aria-hidden="true">
+            <img src="../../assets/commit-guard-logo.svg" alt="" width="52" height="52" />
+          </span>
+          <span>
+            <strong>Commit Guard Support</strong>
+            <em>Technical Information</em>
+          </span>
+        </a>
+
+        <div class="footer-links">
+          <a href="../">Documentation</a>
+          <a href="../faq/">FAQ</a>
+          <a href="../../issue-tracker/">Issue Tracker</a>
+          <a href="https://github.com/shopycornltd/commit-guard-support/issues">GitHub Issues</a>
+        </div>
+      </div>
+      <div class="container footer-copy">
+        <span>&copy; 2026 Shopycorn Ltd. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>

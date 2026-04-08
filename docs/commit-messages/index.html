@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Commit Guard Docs | Commit Messages</title>
+    <meta
+      name="description"
+      content="Commit-message generation details for Commit Guard, including templates, Jira ticket handling, IntelliJ generation, and terminal prefills."
+    />
+    <link rel="stylesheet" href="../../assets/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="../../">
+          <span class="brand-logo" aria-hidden="true">
+            <img src="../../assets/commit-guard-logo.svg" alt="Commit Guard logo" width="52" height="52" />
+          </span>
+          <span>
+            <strong>Commit Guard Support</strong>
+            <em>Commit Messages</em>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href="../../">Home</a>
+          <a href="../" aria-current="page">Documentation</a>
+          <a href="../faq/">FAQ</a>
+          <a href="../../issue-tracker/">Issue Tracker</a>
+          <a href="https://shopycornltd.github.io/commit-guard-site/">Main Site</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="eyebrow">Commit Messages</div>
+          <h1>How Commit Guard generates commit messages.</h1>
+          <p class="lede">
+            Commit-message generation is available on Platinum and follows the saved default template in both IntelliJ and the managed terminal hook path.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container doc-shell">
+          <aside class="doc-sidebar">
+            <div class="sidebar-card">
+              <h3>Documentation</h3>
+              <div class="sidebar-links">
+                <a href="../">Docs Home</a>
+                <a href="../getting-started/">Getting Started</a>
+                <a href="../technical-information/">Technical Information</a>
+                <a href="./" aria-current="page">Commit Messages</a>
+                <a href="../faq/">FAQ</a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="doc-body">
+            <section>
+              <h2>Where generation happens</h2>
+              <ul class="doc-list">
+                <li><strong>IntelliJ:</strong> use the commit UI action to generate a message from the included changes.</li>
+                <li><strong>Terminal:</strong> blank commit messages can be prefilled through the managed <code>prepare-commit-msg</code> hook when the repo sidecar and daemon are active.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Template behavior</h2>
+              <p>The saved default template is shared across IntelliJ and terminal generation.</p>
+              <ul class="doc-list">
+                <li>Templates can include Jira ticket placeholders like <code>WD-&lt;ticket-number&gt;</code>.</li>
+                <li>Commit Guard tries to reuse a real <code>WD-123</code> style ticket from the current Git branch or draft message.</li>
+                <li>If no ticket is detected, the placeholder is preserved instead of inventing a value.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Expected shape</h2>
+              <pre><code>feat(WD-123): add editable commit templates
+
+Description:
+- Add a settings UI for viewing and editing commit templates.
+
+Motivation:
+- Let teams control commit format without changing code.
+
+Changes:
+- Added persistent template storage
+- Added template editor UI
+- Applied the default template to terminal commits</code></pre>
+            </section>
+
+            <section>
+              <h2>Terminal conditions</h2>
+              <ul class="doc-list">
+                <li>The repo must have the managed hooks installed.</li>
+                <li>IntelliJ must be open on the same repository.</li>
+                <li>The daemon socket must be available.</li>
+                <li>The commit message must be blank. Explicit messages such as <code>git commit -m</code> are left untouched.</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand" href="../../">
+          <span class="brand-logo" aria-hidden="true">
+            <img src="../../assets/commit-guard-logo.svg" alt="" width="52" height="52" />
+          </span>
+          <span>
+            <strong>Commit Guard Support</strong>
+            <em>Commit Messages</em>
+          </span>
+        </a>
+
+        <div class="footer-links">
+          <a href="../">Documentation</a>
+          <a href="../faq/">FAQ</a>
+          <a href="../../issue-tracker/">Issue Tracker</a>
+          <a href="https://github.com/shopycornltd/commit-guard-support/issues">GitHub Issues</a>
+        </div>
+      </div>
+      <div class="container footer-copy">
+        <span>&copy; 2026 Shopycorn Ltd. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>

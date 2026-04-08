@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Commit Guard Docs | Getting Started</title>
+    <meta
+      name="description"
+      content="Getting started with Commit Guard in IntelliJ: install, configure providers, run reviews, and enable optional terminal workflows."
+    />
+    <link rel="stylesheet" href="../../assets/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="../../">
+          <span class="brand-logo" aria-hidden="true">
+            <img src="../../assets/commit-guard-logo.svg" alt="Commit Guard logo" width="52" height="52" />
+          </span>
+          <span>
+            <strong>Commit Guard Support</strong>
+            <em>Getting Started</em>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href="../../">Home</a>
+          <a href="../" aria-current="page">Documentation</a>
+          <a href="../faq/">FAQ</a>
+          <a href="../../issue-tracker/">Issue Tracker</a>
+          <a href="https://shopycornltd.github.io/commit-guard-site/">Main Site</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="eyebrow">Getting Started</div>
+          <h1>Set up Commit Guard and run the first review.</h1>
+          <p class="lede">
+            These steps mirror the current product behavior in IntelliJ and cover the optional terminal path without mixing in unsupported setup.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container doc-shell">
+          <aside class="doc-sidebar">
+            <div class="sidebar-card">
+              <h3>Documentation</h3>
+              <div class="sidebar-links">
+                <a href="../">Docs Home</a>
+                <a href="./" aria-current="page">Getting Started</a>
+                <a href="../technical-information/">Technical Information</a>
+                <a href="../commit-messages/">Commit Messages</a>
+                <a href="../faq/">FAQ</a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="doc-body">
+            <section>
+              <h2>Setup steps</h2>
+              <ol class="doc-list">
+                <li>Install Commit Guard from JetBrains Marketplace and restart IntelliJ if prompted.</li>
+                <li>Open <code>Settings | Tools | Commit Guard | Providers</code> and configure your AI provider.</li>
+                <li>Open the <code>Commit Guard</code> tool window.</li>
+                <li>Select a review scope such as pending changes, local commits, or a folder scope.</li>
+                <li>Click <code>Review</code> to run the workflow and inspect findings, workflow steps, and the generated report.</li>
+              </ol>
+            </section>
+
+            <section>
+              <h2>Provider setup</h2>
+              <p>Provider availability depends on your edition.</p>
+              <ul class="doc-list">
+                <li><strong>Community:</strong> local review with <code>Ollama CLI</code></li>
+                <li><strong>Platinum:</strong> local and supported cloud providers</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Optional setup</h2>
+              <ul class="doc-list">
+                <li>Choose a default commit-message template in <code>Settings | Tools | Commit Guard | Commit Rules</code>.</li>
+                <li>Platinum users can generate commit messages from the IntelliJ commit flow.</li>
+                <li>In <code>Advanced</code>, enable the repo sidecar and terminal commit gate if you want terminal commits to run through the managed hook path.</li>
+              </ul>
+            </section>
+
+            <section>
+              <div class="notice-panel">
+                <h3>Terminal note</h3>
+                <p>
+                  Terminal commit-message prefills only happen when the managed hooks are installed for that repo, IntelliJ is open on the same repository, and the commit message is blank.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand" href="../../">
+          <span class="brand-logo" aria-hidden="true">
+            <img src="../../assets/commit-guard-logo.svg" alt="" width="52" height="52" />
+          </span>
+          <span>
+            <strong>Commit Guard Support</strong>
+            <em>Getting Started</em>
+          </span>
+        </a>
+
+        <div class="footer-links">
+          <a href="../">Documentation</a>
+          <a href="../faq/">FAQ</a>
+          <a href="../../issue-tracker/">Issue Tracker</a>
+          <a href="https://github.com/shopycornltd/commit-guard-support/issues">GitHub Issues</a>
+        </div>
+      </div>
+      <div class="container footer-copy">
+        <span>&copy; 2026 Shopycorn Ltd. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Commit Guard Docs | FAQ</title>
+    <meta
+      name="description"
+      content="Frequently asked questions for Commit Guard covering installation, editions, providers, commit messages, terminal hooks, troubleshooting, and support."
+    />
+    <link rel="stylesheet" href="../../assets/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="../../">
+          <span class="brand-logo" aria-hidden="true">
+            <img src="../../assets/commit-guard-logo.svg" alt="Commit Guard logo" width="52" height="52" />
+          </span>
+          <span>
+            <strong>Commit Guard Support</strong>
+            <em>FAQ</em>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href="../../">Home</a>
+          <a href="../">Documentation</a>
+          <a href="./" aria-current="page">FAQ</a>
+          <a href="../../issue-tracker/">Issue Tracker</a>
+          <a href="https://shopycornltd.github.io/commit-guard-site/">Main Site</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="eyebrow">FAQ</div>
+          <h1>Frequently asked questions about Commit Guard.</h1>
+          <p class="lede">
+            This page gathers the most common support questions around setup, providers, editions, commit-message generation, terminal hooks, and issue reporting.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container doc-shell">
+          <aside class="doc-sidebar">
+            <div class="sidebar-card">
+              <h3>Documentation</h3>
+              <div class="sidebar-links">
+                <a href="../">Docs Home</a>
+                <a href="../getting-started/">Getting Started</a>
+                <a href="../technical-information/">Technical Information</a>
+                <a href="../commit-messages/">Commit Messages</a>
+                <a href="./" aria-current="page">FAQ</a>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>Still need help?</h3>
+              <div class="sidebar-links">
+                <a href="../../issue-tracker/">Issue Tracker Guide</a>
+                <a href="https://github.com/shopycornltd/commit-guard-support/issues/new?template=bug_report.md">Report a bug</a>
+                <a href="https://github.com/shopycornltd/commit-guard-support/issues/new?template=feature_request.md">Request a feature</a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="doc-body">
+            <section>
+              <h2>General</h2>
+              <div class="faq-list">
+                <details class="faq-item" open>
+                  <summary>What is Commit Guard?</summary>
+                  <div class="faq-answer">
+                    <p>Commit Guard is an IntelliJ plugin for workflow-driven AI code review. It can review pending changes, local commits, and selected scopes, then produce findings and a structured report inside the IDE.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>Which IDEs and versions are supported?</summary>
+                  <div class="faq-answer">
+                    <p>Commit Guard is packaged for current IntelliJ IDEA compatible ranges and validated through the JetBrains Plugin Verifier during release automation. The Marketplace listing is the best source of truth for the exact supported build range.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>What is the difference between Community and Platinum?</summary>
+                  <div class="faq-answer">
+                    <p>Community focuses on local review with <code>Ollama CLI</code> and the core AI review flow. Platinum adds supported cloud providers, advanced workflows, commit-message generation, daemon features, terminal commit workflows, and debug tooling.</p>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section>
+              <h2>Providers and reviews</h2>
+              <div class="faq-list">
+                <details class="faq-item">
+                  <summary>How do I run my first review?</summary>
+                  <div class="faq-answer">
+                    <p>Open <code>Settings | Tools | Commit Guard | Providers</code>, configure a provider, open the Commit Guard tool window, choose a review scope, and click <code>Review</code>.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>Can I use local models only?</summary>
+                  <div class="faq-answer">
+                    <p>Yes. Community is built around local review with <code>Ollama CLI</code>. Platinum can still use local models, but also supports supported cloud providers.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>Why does a review not start?</summary>
+                  <div class="faq-answer">
+                    <p>The most common causes are missing provider configuration, no selected review scope, licensing restrictions for the chosen capability, or provider validation failures. Check the provider settings first.</p>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section>
+              <h2>Commit-message generation</h2>
+              <div class="faq-list">
+                <details class="faq-item">
+                  <summary>Is commit-message generation available in Community?</summary>
+                  <div class="faq-answer">
+                    <p>No. Commit-message generation is a Platinum capability.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>Where do I configure the default commit-message template?</summary>
+                  <div class="faq-answer">
+                    <p>Use <code>Settings | Tools | Commit Guard | Commit Rules</code>. The saved default template is used by both the IntelliJ generation flow and the managed terminal hook path.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>How does Jira ticket handling work?</summary>
+                  <div class="faq-answer">
+                    <p>Commit Guard looks for a <code>WD-123</code> style ticket in the current branch name or existing draft message. If it finds one, it reuses it. If not, it leaves the placeholder such as <code>WD-&lt;ticket-number&gt;</code> instead of inventing a value.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>Why did the generated message include extra prompt text?</summary>
+                  <div class="faq-answer">
+                    <p>Older builds could leak prompt scaffolding such as branch context into the final message. Current builds normalize the result and strip those sections before applying the commit message.</p>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section>
+              <h2>Terminal workflows</h2>
+              <div class="faq-list">
+                <details class="faq-item">
+                  <summary>Why did <code>git commit</code> open the normal Git editor instead of a generated message?</summary>
+                  <div class="faq-answer">
+                    <p>That usually means one of the terminal prerequisites was missing: the managed hooks were not installed yet, IntelliJ was not open on the same repo, the daemon was unavailable, or the commit already had content. The managed terminal path only prefills blank messages.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>Will Commit Guard overwrite <code>git commit -m</code> messages?</summary>
+                  <div class="faq-answer">
+                    <p>No. Explicit commit messages are preserved. Terminal prefills only target blank commit message buffers.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>What settings are required for terminal commit workflows?</summary>
+                  <div class="faq-answer">
+                    <p>In <code>Settings | Tools | Commit Guard | Advanced</code>, enable the repo sidecar and turn on terminal commit enforcement. Commit Guard will then install the managed hooks for that repository and use the daemon to evaluate commits and prefill blank messages when allowed.</p>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section>
+              <h2>Support and issue tracking</h2>
+              <div class="faq-list">
+                <details class="faq-item">
+                  <summary>Where should I report a bug?</summary>
+                  <div class="faq-answer">
+                    <p>Use the public GitHub issue tracker in the support repository:
+                      <a class="inline-link" href="https://github.com/shopycornltd/commit-guard-support/issues/new?template=bug_report.md">open the bug report template</a>.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>Where should I request a feature?</summary>
+                  <div class="faq-answer">
+                    <p>Use the public GitHub issue tracker in the support repository:
+                      <a class="inline-link" href="https://github.com/shopycornltd/commit-guard-support/issues/new?template=feature_request.md">open the feature request template</a>.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary>Should security issues be filed as GitHub issues?</summary>
+                  <div class="faq-answer">
+                    <p>No. Security-sensitive reports should go through the
+                      <a class="inline-link" href="https://shopycornltd.github.io/commit-guard-site/security/">security reporting path</a>,
+                      not the public issue tracker.
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand" href="../../">
+          <span class="brand-logo" aria-hidden="true">
+            <img src="../../assets/commit-guard-logo.svg" alt="" width="52" height="52" />
+          </span>
+          <span>
+            <strong>Commit Guard Support</strong>
+            <em>FAQ</em>
+          </span>
+        </a>
+
+        <div class="footer-links">
+          <a href="../">Documentation</a>
+          <a href="./">FAQ</a>
+          <a href="../../issue-tracker/">Issue Tracker</a>
+          <a href="https://github.com/shopycornltd/commit-guard-support/issues">GitHub Issues</a>
+        </div>
+      </div>
+      <div class="container footer-copy">
+        <span>&copy; 2026 Shopycorn Ltd. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>

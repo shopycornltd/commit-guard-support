@@ -1,20 +1,23 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
+about: Suggest a workflow, UX, or platform improvement
+title: "[Feature] "
+labels: enhancement
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**Problem or opportunity**
+What workflow is currently blocked, slow, or unclear?
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**Proposed solution**
+What would you like Commit Guard to do?
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Alternatives considered**
+List any workarounds, competing approaches, or other ideas you already considered.
+
+**Who benefits**
+Who would use this and in which scenarios?
 
 **Additional context**
-Add any other context or screenshots about the feature request here.
+Add screenshots, examples, or extra context here.

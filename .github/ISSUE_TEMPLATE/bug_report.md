@@ -1,38 +1,41 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
+about: Report a plugin bug, regression, or workflow failure
+title: "[Bug] "
+labels: bug
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**Summary**
+A short description of the problem.
 
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+What should have happened instead?
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Actual behavior**
+What actually happened?
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Steps to reproduce**
+1. Open `...`
+2. Configure `...`
+3. Run `...`
+4. Observe `...`
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+**Environment**
+- IntelliJ version:
+- Commit Guard version:
+- Edition: Community / Platinum
+- Provider:
+- Operating system:
+
+**Repo context**
+- Project type:
+- Review scope: pending changes / commits / folder / terminal commit
+- Relevant branch:
+
+**Logs or screenshots**
+Add screenshots, stack traces, or relevant log excerpts if available.
 
 **Additional context**
-Add any other context about the problem here.
+Anything else that would help us reproduce or understand the issue.
