@@ -30,5 +30,5 @@ Recommended public URLs:
 
 ## Notes
 
-- Security issues should not be filed publicly. The site links users to the separate security reporting instructions.
+- This repository is intended for public support content, technical documentation, and issue tracking.
 - Legal pages stay on the main public Commit Guard website.
