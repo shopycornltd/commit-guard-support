@@ -14,6 +14,11 @@
   --radius-lg: 22px;
   --radius-md: 16px;
   --max: 1180px;
+  --chrome-bg: linear-gradient(135deg, rgba(255, 236, 202, 0.95), rgba(255, 194, 185, 0.92) 48%, rgba(255, 224, 244, 0.9));
+  --chrome-border: rgba(255, 239, 216, 0.68);
+  --chrome-text: #18243f;
+  --chrome-muted: rgba(24, 36, 63, 0.72);
+  --chrome-logo-bg: rgba(255, 255, 255, 0.6);
 }
 
 * {
@@ -63,8 +68,9 @@ code {
   top: 0;
   z-index: 40;
   backdrop-filter: blur(18px);
-  background: rgba(7, 14, 23, 0.76);
-  border-bottom: 1px solid rgba(139, 184, 255, 0.08);
+  background: var(--chrome-bg);
+  border-bottom: 1px solid var(--chrome-border);
+  box-shadow: 0 10px 24px rgba(11, 18, 31, 0.12);
 }
 
 .nav-shell {
@@ -87,6 +93,9 @@ code {
   flex: 0 0 52px;
   border-radius: 18px;
   overflow: hidden;
+  background: var(--chrome-logo-bg);
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  box-shadow: 0 10px 22px rgba(20, 29, 51, 0.16);
 }
 
 .brand-logo img {
@@ -103,10 +112,11 @@ code {
 .brand strong {
   font-size: 16px;
   letter-spacing: 0.01em;
+  color: var(--chrome-text);
 }
 
 .brand em {
-  color: var(--muted);
+  color: var(--chrome-muted);
   font-style: normal;
   font-size: 12px;
 }
@@ -115,7 +125,7 @@ code {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  color: var(--muted);
+  color: var(--chrome-muted);
   font-size: 14px;
 }
 
@@ -123,7 +133,7 @@ code {
 .site-nav a[aria-current="page"],
 .footer-links a:hover,
 .inline-link:hover {
-  color: var(--text);
+  color: var(--chrome-text);
 }
 
 .hero-band,
@@ -512,12 +522,15 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
-  color: var(--muted);
+  color: var(--chrome-muted);
 }
 
 .site-footer {
   padding: 26px 0 36px;
-  border-top: 1px solid rgba(139, 184, 255, 0.08);
+  margin-top: 24px;
+  border-top: 1px solid var(--chrome-border);
+  background: var(--chrome-bg);
+  box-shadow: 0 -10px 24px rgba(11, 18, 31, 0.08);
 }
 
 .footer-grid {
@@ -530,6 +543,7 @@ h3 {
 .footer-copy {
   margin-top: 18px;
   font-size: 14px;
+  color: var(--chrome-muted);
 }
 
 .inline-link {
