@@ -92,8 +92,9 @@
             <section>
               <h2>Compatibility</h2>
               <p class="muted">
-                Commit Guard is verified against the latest patch in each active branch listed below. Community-specific IntelliJ IDEA and PyCharm verification ends at
-                <code>2025.2.x</code> because JetBrains uses unified IntelliJ IDEA and PyCharm product lines from <code>2025.3.x</code> onward.
+                Commit Guard supports the JetBrains IDE branches listed below through Marketplace compatibility metadata. Release automation verifies the latest supported
+                build for each product line, and Community-specific IntelliJ IDEA and PyCharm coverage ends at <code>2025.2.x</code> because JetBrains uses unified
+                IntelliJ IDEA and PyCharm product lines from <code>2025.3.x</code> onward.
               </p>
 
               <div class="compatibility-grid" aria-label="Supported JetBrains IDEs and version branches">
@@ -260,9 +261,9 @@
               </div>
 
               <ul class="doc-list">
-                <li>JetBrains Plugin Verifier runs against the latest patch in each listed branch during release automation</li>
+                <li>Release automation runs JetBrains Plugin Verifier and IDE performance smoke tests against the latest supported build for each product line</li>
+                <li>Marketplace compatibility metadata covers the supported branches shown above: <code>2025.1.x</code>, <code>2025.2.x</code>, <code>2025.3.x</code>, and <code>2026.1.x</code></li>
                 <li>Community-specific IntelliJ IDEA and PyCharm verification applies through <code>2025.2.x</code>; unified IntelliJ IDEA and PyCharm product lines are used from <code>2025.3.x</code> onward</li>
-                <li>Marketplace compatibility metadata is published from the same supported build range</li>
               </ul>
             </section>
 

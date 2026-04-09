@@ -86,7 +86,8 @@
                     <p>
                       Supported branches are <code>2025.1.x</code>, <code>2025.2.x</code>, <code>2025.3.x</code>, and <code>2026.1.x</code>. IntelliJ IDEA Community and
                       PyCharm Community are verified through <code>2025.2.x</code> only because JetBrains uses unified IntelliJ IDEA and PyCharm product lines from
-                      <code>2025.3.x</code> onward. See the <a class="inline-link" href="../technical-information/">Technical Information</a> page for the full product matrix.
+                      <code>2025.3.x</code> onward. Release automation verifies the latest supported build for each product line rather than every patch in each branch.
+                      See the <a class="inline-link" href="../technical-information/">Technical Information</a> page for the full product matrix.
                     </p>
                   </div>
                 </details>
@@ -165,7 +166,7 @@
                 <details class="faq-item">
                   <summary>Why did <code>git commit</code> open the normal Git editor instead of a generated message?</summary>
                   <div class="faq-answer">
-                    <p>That usually means one of the terminal prerequisites was missing: the managed hooks were not installed yet, IntelliJ was not open on the same repo, the daemon was unavailable, or the commit already had content. The managed terminal path only prefills blank messages.</p>
+                    <p>That usually means one of the terminal prerequisites was missing: the managed hooks were not installed yet, IntelliJ was not open on the same repo, the local background service was unavailable, or the commit already had content. The managed terminal path only prefills blank messages.</p>
                   </div>
                 </details>
 
@@ -179,7 +180,7 @@
                 <details class="faq-item">
                   <summary>What settings are required for terminal commit workflows?</summary>
                   <div class="faq-answer">
-                    <p>In <code>Settings | Tools | Commit Guard | Advanced</code>, enable the repo sidecar and turn on terminal commit enforcement. Commit Guard will then install the managed hooks for that repository and use the daemon to evaluate commits and prefill blank messages when allowed.</p>
+                    <p>In <code>Settings | Tools | Commit Guard | Advanced</code>, enable the repo sidecar and turn on terminal commit enforcement. Commit Guard will then install the managed hooks for that repository and use the local background service to evaluate commits and prefill blank messages when allowed.</p>
                   </div>
                 </details>
               </div>
